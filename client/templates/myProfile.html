@@ -1,0 +1,102 @@
+<template name="myProfile">
+  <div class="container myprofile fill-height">
+    <div id="dropzone" class="profile-picture right pdropzone">
+      {{#if profile.picture}}
+        {{#if picture}}
+          {{#with picture}}
+            {{#unless this.isUploaded}}
+              {{> FS.UploadProgressBar}}
+            {{/unless}}
+            <img class="rounded responsive-img" src="{{this.url store='imagesThumbs'}}" alt=""/>
+          {{/with}}
+        {{else}}
+          {{> uploadProfile}}
+        {{/if}}
+      {{else}}
+        {{> uploadProfile}}
+      {{/if}}
+    </div>
+    <input type="file" multiple class="form-control uploadImages" style="display:none"/>
+  <h5 data-key="name" class="editable light">{{{default profile.name.value "My Name" }}}</h5>
+
+    <div class="row">
+      <div class="col s8 editable light" data-key="email">{{{default profile.email.value "email" }}}</div>
+      <div class="switch right">
+	{{_ "hidden"}}
+	<label>
+	  {{_ "no"}}
+	  <input type="checkbox" data-acl="email" checked="{{defaultb profile.email.hidden true}}"><span class="lever"></span>
+	  {{_ "yes"}}
+	</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s8 editable full" data-key="description">{{{default profile.description.value "descriptionPlaceholder" }}}</div>
+      <div class="switch right">
+	{{_ "hidden"}}
+	<label>
+	  {{_ "no"}}
+	  <input type="checkbox" data-acl="description" checked="{{defaultb profile.description.hidden true}}"><span class="lever"></span>
+	  {{_ "yes"}}
+	</label>
+      </div>
+
+    </div>
+
+    <h5>{{_ "Default share"}}</h5>
+    {{> editSharePermissions}}
+
+
+    {{#if haveInvitations}}
+    <h5>{{_ "Invitations"}}</h5>
+    <ul class="collection">
+    {{#each invitation}}
+    <li class="collection-item avatar">
+      {{#with picture2}}<img class="circle" src="{{this.url store='imagesThumbs'}}" alt=""/>{{/with}}
+      <span class="title">{{#if user.profile.name}}{{user.profile.name.value}}{{else}}{{_ "Anonymous user"}}{{/if}}</span>
+      <p>{{date}}</p>
+      <a id="confirmInvitation" class="secondary-content waves-effect waves-teal btn-flat"><i class="small mdi-social-plus-one"></i></a>
+    </li>
+    {{/each}}
+    </ul>
+    {{/if}}
+
+    {{#if haveFriends}}
+    <h5>{{_ "Friends"}}</h5>
+    <ul class="collection">
+    {{#each friends}}
+    <li class="collection-item avatar">
+      <a href="{{pathFor 'profile' id=user._id}}">{{#with picture2}}<img class="circle" src="{{this.url store='imagesThumbs'}}" alt=""/>{{/with}}
+      <span class="title">{{#if user.profile.name}}{{user.profile.name.value}}{{else}}{{_ "Anonymous user"}}{{/if}}</span></a>
+      <p>{{date}}</p>
+    </li>
+    {{/each}}
+    </ul>
+    {{/if}}
+
+
+    {{#if haveInvitationSent}}
+    <h5>{{_ "Invitations Sent"}}</h5>
+    <ul class="collection">
+    {{#each invitationSent}}
+    <li class="collection-item avatar">
+      <a href="{{pathFor 'profile' id=user._id}}">{{#with picture2}}<img class="circle" src="{{this.url store='imagesThumbs'}}" alt="" style="height:24px"/>{{/with}}
+      <span class="title">{{#if user.profile.name}}{{user.profile.name.value}}{{else}}{{_ "Anonymous user"}}{{/if}}</span></a>
+      <p>{{date}}</p>
+      <a href="#!" class="secondary-content"><i class="small mdi-navigation-cancel"></i></a>
+    </li>
+    {{/each}}
+    </ul>
+    {{/if}}
+
+    {{> atForm state='changePwd'}}
+  </div>
+</template>
+
+
+<template name="uploadProfile">
+  <div class="valign-wrapper dropzone">
+    <div class="valign center-align text-grey">{{_ "Drop file to upload"}}</div>
+  </div>
+</template>

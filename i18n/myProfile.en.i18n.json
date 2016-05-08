@@ -1,0 +1,13 @@
+{
+    "My Name" : "My name and surname",
+    "hidden": "hidden",
+    "descriptionPlaceholder": "I describe myself as...",
+    
+    "InvalidEmailAddress": "Invalid email address: %s!",
+
+    "Invitations":"Invitations",
+    "Anonymous user":"Anonymous user",
+    "Friends":"Friends",
+    "Invitations Sent":"Invitations Sent"
+
+}

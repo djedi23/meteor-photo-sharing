@@ -1,0 +1,44 @@
+<template name="camanToolbarAction">
+  <li class="waves-effect {{#if editMode}}active{{/if}}"><a id="toggleEditMode"><i class="mdi-action-settings"></i></a></li>
+</template>
+
+<template name="camanSettingsPanel">
+    {{#if editMode}}
+    <div style="padding:1ex">
+      <div class="section">
+	<h5>Corrections</h5>
+	<h6><i class="mdi-device-brightness-medium"></i>{{_ "Brightness"}}</h6>
+	<div>
+	  <label>{{_ "Brightness"}}</label>
+	  <div class="range-field">
+	    <input type="range" id="brightness" min="-100" max="100" value="{{default effects.brightness 0}}" />
+	  </div>
+	</div>
+	<h6><i class="mdi-image-tonality"></i>Clipping</h6>
+	<div>
+	  <label>Seuil</label>
+	  <div class="range-field">
+	    <input type="range" id="clip" min="0" max="100" value="{{default effects.clip 0}}" />
+	  </div>
+	</div>
+      </div>
+      <div class="section">
+	<h5>Effets</h5>
+	<h6><i class="mdi-image-lens"></i>Vignette</h6>
+	<div>
+	  <label for="vsize">Taille</label>
+	  <div class="range-field">
+	    <input type="range" id="vsize" min="0" max="100" value="{{default effects.vignette.size 0}}" />
+	  </div>
+	</div>
+	<div>
+	  <label for="vstrenght">Force</label>
+	  <div class="range-field">
+	    <input type="range" id="vstrenght" min="0" max="100" value="{{default effects.vignette.strenght 0}}" />
+	  </div>
+	</div>
+      </div>
+    </div>
+    {{/if}}
+
+</template>

@@ -1,0 +1,39 @@
+<template name="editPhoto">
+	<div class="row fill-height">
+		<div class="photo col s12">
+			<div class="fullscreen">
+				{{#if previousPhoto}}
+				<div class="left valign-wrapper fill-height"><a id="previous" class="valign grey-text" href="{{pathFor 'editPhoto' id=previousPhoto._id}}"><i class="small mdi-navigation-chevron-left"></i></a></div>{{/if}} {{#if this}}
+				<img id="mainPhoto" src="{{#with image}}{{this.url store='imagesScreen'}}{{/with}}" class="z-depth-2" alt="" /> {{else}} {{> error404Photo}} {{/if}} {{#if nextPhoto}}
+				<div class="right valign-wrapper fill-height"><a id="next" class="valign grey-text" href="{{pathFor 'editPhoto' id=nextPhoto._id}}"><i class="small mdi-navigation-chevron-right"></i></a></div>{{/if}}
+			</div>
+			<div class="info">
+				<div class="title editable" data-key="title">{{{default_ title "Edit Title"}}}</div>
+				<div class="place editable" data-key="place">{{{default_ place "Edit Place"}}}</div>
+				<div class="date editable" data-key="date">{{{default_ date "Edit Date"}}}</div>
+				<div class="description editable" data-key="description">{{{default_ description "Edit Description"}}}</div>
+				<div class="tags">{{# each tags}}<div class="chip">{{this}}</div>{{/each}}</div>
+			</div>
+			{{#if isOwner}}
+			<div class="white toolbar-floating z-depth-1">
+				<div class="right-align">
+					<ul>
+						<li class="waves-effect"><a id="actionDelete"><i class="mdi-action-delete"></i></a></li>
+						{{> runHooks 'template.editphoto.toolbar.action'}}
+						<li class="waves-effect {{#if editShareMode}}active{{/if}}"><a id="toggleEditShareMode"><i class="mdi-action-visibility"></i></a></li>
+					</ul>
+				</div>
+				{{#if editShareMode}} {{> editSharePermissions}} {{/if}} {{> runHooks 'template.editphoto.panel'}}
+			</div>
+			{{/if}}
+
+		</div>
+	</div>
+</template>
+
+<template name="error404Photo">
+	<div class="container">
+		<h3>{{_ "404 Title"}}</h3>
+		<p>{{_ "404 Details"}}</p>
+	</div>
+</template>

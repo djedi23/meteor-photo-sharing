@@ -1,0 +1,306 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/djedi/prj/meteor/photo-album/docs/todos.org
+
+
+* DONE la dropzone des profil a perdu son css.				:bug:
+  CLOSED: [2015-04-29 Wed 18:21]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-02 Sat 16:56
+  :ARCHIVE_FILE: ~/prj/meteor/photo-album/docs/todos.org
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE [#B] Faire un showLoadingIndicator pour les wiaton des routes.
+  CLOSED: [2015-04-26 Sun 13:20]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-02 Sat 16:56
+  :ARCHIVE_FILE: ~/prj/meteor/photo-album/docs/todos.org
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE sanitize html
+  CLOSED: [2015-04-27 Mon 16:00]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-02 Sat 16:56
+  :ARCHIVE_FILE: ~/prj/meteor/photo-album/docs/todos.org
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE Gestion du pen et de la valeur de retour.
+  CLOSED: [2015-04-28 Tue 14:11]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-02 Sat 16:56
+  :ARCHIVE_FILE: ~/prj/meteor/photo-album/docs/todos.org
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE créer un album
+  CLOSED: [2015-04-29 Wed 12:45]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-02 Sat 16:56
+  :ARCHIVE_FILE: ~/prj/meteor/photo-album/docs/todos.org
+  :ARCHIVE_OLPATH: Album
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE voir un album
+  CLOSED: [2015-05-02 Sat 08:26]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-02 Sat 16:56
+  :ARCHIVE_FILE: ~/prj/meteor/photo-album/docs/todos.org
+  :ARCHIVE_OLPATH: Album
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+Archived entries from file /home/djedi/prj/meteor/photo-album/docs/todos.org
+
+
+* DONE [#B] Faire un showLoadingIndicator pour les wiaton des routes.
+  CLOSED: [2015-04-26 Sun 13:20]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-02 Sat 16:59
+  :ARCHIVE_FILE: ~/prj/meteor/photo-album/docs/todos.org
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE Changer le bouton de logout
+  CLOSED: [2015-04-28 Tue 14:10]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-02 Sat 16:59
+  :ARCHIVE_FILE: ~/prj/meteor/photo-album/docs/todos.org
+  :ARCHIVE_OLPATH: Page profil
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE Valider format emails
+  CLOSED: [2015-04-28 Tue 15:07]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-02 Sat 16:59
+  :ARCHIVE_FILE: ~/prj/meteor/photo-album/docs/todos.org
+  :ARCHIVE_OLPATH: Page profil
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE sanitize html
+  CLOSED: [2015-04-27 Mon 16:00]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-02 Sat 16:59
+  :ARCHIVE_FILE: ~/prj/meteor/photo-album/docs/todos.org
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE Gestion du pen et de la valeur de retour.
+  CLOSED: [2015-04-28 Tue 14:11]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-02 Sat 16:59
+  :ARCHIVE_FILE: ~/prj/meteor/photo-album/docs/todos.org
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE créer un album
+  CLOSED: [2015-04-29 Wed 12:45]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-02 Sat 17:08
+  :ARCHIVE_FILE: ~/prj/meteor/photo-album/docs/todos.org
+  :ARCHIVE_OLPATH: Album
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE Ajouter le dockerfile dans le projet
+  CLOSED: [2015-05-02 sam. 22:30]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-04 Mon 16:05
+  :ARCHIVE_FILE: ~/prj/meteor/meteor-photo-albums/docs/todos.org
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE si homepage alors public
+  CLOSED: [2015-05-04 Mon 16:04]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-04 Mon 16:06
+  :ARCHIVE_FILE: ~/prj/meteor/meteor-photo-albums/docs/todos.org
+  :ARCHIVE_OLPATH: Initier les roles
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE Pas afficher le titre si pas de titre et pas l'auteur
+  CLOSED: [2015-05-03 Sun 09:20]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-04 Mon 16:06
+  :ARCHIVE_FILE: ~/prj/meteor/meteor-photo-albums/docs/todos.org
+  :ARCHIVE_OLPATH: page photos:
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE infos
+  CLOSED: [2015-05-04 Mon 16:06]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-04 Mon 16:06
+  :ARCHIVE_FILE: ~/prj/meteor/meteor-photo-albums/docs/todos.org
+  :ARCHIVE_OLPATH: page photos:
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+** lieu
+** date
+** description
+
+* DONE permission album
+  CLOSED: [2015-05-04 Mon 11:46]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-04 Mon 16:06
+  :ARCHIVE_FILE: ~/prj/meteor/meteor-photo-albums/docs/todos.org
+  :ARCHIVE_OLPATH: Album
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE voir un album
+  CLOSED: [2015-05-02 Sat 08:26]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-04 Mon 16:06
+  :ARCHIVE_FILE: ~/prj/meteor/meteor-photo-albums/docs/todos.org
+  :ARCHIVE_OLPATH: Album
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE [#B] uploader directement dans un album
+  CLOSED: [2015-05-03 Sun 09:20]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-04 Mon 16:06
+  :ARCHIVE_FILE: ~/prj/meteor/meteor-photo-albums/docs/todos.org
+  :ARCHIVE_OLPATH: Album
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE copier les photos
+  CLOSED: [2015-05-03 Sun 09:21]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-04 Mon 16:06
+  :ARCHIVE_FILE: ~/prj/meteor/meteor-photo-albums/docs/todos.org
+  :ARCHIVE_OLPATH: Album
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+** DONE visuel des album avec photos
+   CLOSED: [2015-04-30 Thu 06:53]
+** DONE [#A] permission des updates
+   CLOSED: [2015-05-02 Sat 15:22]
+   vérifier que les photo et albums appartiennent à la bonne personne.
+
+
+
+
+* DONE Supprimer une photo de l'album
+  CLOSED: [2015-05-04 Mon 12:19]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-04 Mon 16:06
+  :ARCHIVE_FILE: ~/prj/meteor/meteor-photo-albums/docs/todos.org
+  :ARCHIVE_OLPATH: Album/Edition album
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE pb deplaoyement et wsocket
+  CLOSED: [2015-05-04 Mon 16:06]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-04 Mon 16:10
+  :ARCHIVE_FILE: ~/prj/meteor/meteor-photo-albums/docs/todos.org
+  :ARCHIVE_OLPATH: albums.meteor.com
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE Gestion du floating button dans l'edition
+  CLOSED: [2015-05-05 mar. 20:33]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-05 mar. 20:33
+  :ARCHIVE_FILE: ~/prj/meteor/meteor-photo-albums/docs/todos.org
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+  pas faire un toggle mais un switch: un second clic ne ferfme pas le paneau mais passe au suivant.
+  supprimer le bouton pour fermer le paneau: fiare une toolbar a la place (Fait dans les albums et pour les shares)
+  Transition sur les panneaux
+
+* DONE [#A] Initier les roles
+  CLOSED: [2015-05-26 mar. 09:36]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-31 Sun 07:33
+  :ARCHIVE_FILE: ~/prj/meteor/photo-album/docs/todos.org
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+** DONE role pour le profil
+   CLOSED: [2015-05-26 mar. 09:36]
+*** DONE sauver les roles
+    CLOSED: [2015-05-05 Tue 11:13]
+*** DONE role parents dans albums
+    CLOSED: [2015-05-05 Tue 11:13]
+*** DONE role parent dans photo
+    CLOSED: [2015-05-05 Tue 12:46]
+    ne remonte pas jusqu'à l'utilisateur
+*** DONE role dans publication
+    CLOSED: [2015-05-26 mar. 09:36]
+
+* DONE [#A] Bouton "inviter"
+  CLOSED: [2015-05-28 Thu 05:16]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-31 Sun 07:33
+  :ARCHIVE_FILE: ~/prj/meteor/photo-album/docs/todos.org
+  :ARCHIVE_OLPATH: Page profil
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE inviter
+  CLOSED: [2015-05-28 Thu 05:16]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-05-31 Sun 07:34
+  :ARCHIVE_FILE: ~/prj/meteor/photo-album/docs/todos.org
+  :ARCHIVE_OLPATH: Relation entre utilisateurs
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE La croix pour fermer la recherche
+  CLOSED: [2015-07-13 Mon 07:23]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-07-13 lun. 19:31
+  :ARCHIVE_FILE: ~/prj/meteor/meteor-photo-albums/docs/todos.org
+  :ARCHIVE_OLPATH: Page recherche
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE Relation entre utilisateurs
+  CLOSED: [2015-07-13 Mon 06:33]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2015-07-13 lun. 19:31
+  :ARCHIVE_FILE: ~/prj/meteor/meteor-photo-albums/docs/todos.org
+  :ARCHIVE_CATEGORY: todos
+  :ARCHIVE_TODO: DONE
+  :END:
+** DONE [#A] permission
+   CLOSED: [2015-07-09 Thu 07:38]
+** DONE Faire un lien vers la page de l'utilisateur dans sa liste d'amis
+   CLOSED: [2015-07-06 Mon 07:27]

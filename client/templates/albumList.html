@@ -1,0 +1,28 @@
+<template name="albumList">
+	<div class="albumPanel blue-grey lighten-3 z-depth-1{{#unless haveAlbum}} empty{{/unless}}">
+		<div class="container-fluid">
+			<div class="row">
+				{{#each albums}}
+				<div class="col s6 m12">
+					<div class="album thumbs card brown lighten-3" dropzone="copy" id="alb{{_id}}">
+						<a href="{{pathFor 'album' id=this._id}}">
+							<div class="card-content">
+								{{#masonryContainer transitionDuration="0s" percentPosition="true" id="albumMasonryContainer" }} {{#each photos}} {{#masonryElement parent="albumMasonryContainer"}}
+								<img src="{{this.url  store='imagesThumbs'}}" width="{{width}}" height="{{height}}" /> {{/masonryElement}} {{/each}} {{/masonryContainer}}
+								<div class="card-title">
+									{{{name}}}
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				{{/each}}
+			</div>
+		</div>
+		<div class="right">
+			{{#if showExpandButton}}<a id="expandAlbumBar" class="btn-floating white waves-effect z-depth-1" style="right:1em; top:{{#if haveAlbum}}-2.5em{{else}}0em{{/if}}"><i class="black-text material-icons">{{#if haveAlbum}}expand_less{{else}}expand_more{{/if}}</i></a>{{/if}}
+			<a id="addAlbum" class="btn-floating green waves-effect z-depth-1" style="right:1em; top:{{#if haveAlbum}}-2.5em{{else}}0em{{/if}}"><i class="mdi-content-add"></i></a>
+		</div>
+	</div>
+	<div class="filler{{#if haveAlbum}} filled{{/if}}"></div>
+</template>

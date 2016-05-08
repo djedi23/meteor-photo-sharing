@@ -1,0 +1,15 @@
+
+* permission
+** publique: photo visible par toutes personnes connectées
+** homepage: photo publique mais visible par les personnes non connecté
+** allowreshare: a definir
+** allowmodification: a definir
+
+* publication
+
+| photo    | photo | album | user |
+|----------+-------+-------+------|
+| photo    | test  | test  | test |
+| all      | imp   | imp   | imp  |
+| album    | todo  | todo  | todo |
+| allalbum | todo  | todo  | todo |

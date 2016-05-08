@@ -1,0 +1,99 @@
+<head>
+  <meta name="viewport" content="initial-scale=1" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+</body>
+
+<template name="searchUser">
+  <li class="collection-item avatar"><a href="{{pathFor 'profile' id=this._id}}">{{#with picture}}<img class="circle" src="{{url store='icon'}}">{{/with}}
+    <span class="title">{{profile.name.value}}</span></a></li>
+</template>
+<template name="searchPhoto">
+  <li class="collection-item avatar"><a href="{{pathFor 'editPhoto' id=this._id}}">{{#with picture}}<img class="rounded" src="{{url store='icon'}}">{{/with}}
+    <span class="title">{{title}}</span></a></li>
+</template>
+
+
+<template name="layout">
+  {{#if currentUser}}
+  <ul id="profile-dropdown" class="dropdown-content">
+    <li><a href="{{pathFor 'myProfile'}}">{{_ "my profile"}}</a></li>
+    <li><a id="logoutButton">{{_ 'logout'}}</a></li>
+  </ul>
+  {{/if}}
+  <ul id="searchDrop" class="dropdown-content collection">
+    {{#each searchResults}} {{> Template.dynamic template=type}} {{/each}}
+  </ul>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper blue-grey darken-4">
+        <a class="brand-logo" href="/">{{_ 'Albums photo'}}</a>
+        <a href="#" data-activates="sideNav" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <form>
+              <div class="input-field">
+                <input id="search" type="search" placeholder="{{_ 'search'}}" data-activates="searchDrop" required>
+                <label for="search"><i class="mdi-action-search"></i></label>
+                <i id="searchReset" class="mdi-navigation-close"></i>
+              </div>
+            </form>
+          </li>
+          {{> yield 'toolbar'}} {{#if currentUser}}
+          <li><a class="dropdown-button" data-constrainwidth="false" data-beloworigin="true" data-activates="profile-dropdown">{{#if profilePicture}}<span class="profile-picture-nav"><img class="circle responsive-img" src="{{profilePicture.url store='icon'}}" alt=""/></span>{{else}}<i class="mdi-action-account-circle"></i>{{/if}}</a></li>{{/if}}
+          {{#unless currentUser}}{{>atNavButton}}{{/unless}}
+        </ul>
+      </div>
+      <ul class="side-nav" id="sideNav">
+        {{#if currentUser}}
+        <li class="blue-grey">
+          <a href="{{pathFor 'myProfile'}}" class="white-text">
+	    {{#if profilePicture}}<span class="profile-picture-nav"><img class="circle responsive-img" src="{{profilePicture.url store='icon'}}" alt=""/></span>{{else}}<i class="mdi-action-account-circle"></i>{{/if}}
+	    {{{currentUser.profile.name.value}}}
+	  </a>
+        </li>
+        {{/if}} {{#unless currentUser}}
+        <li class="blue-grey darken-2">{{>atNavButton}}</li>{{/unless}}
+        <li>
+          <form>
+            <div class="input-field">
+              <input id="search" type="search" placeholder="{{_ 'search'}}" required>
+              <label for="search"><i class="mdi-action-search"></i></label>
+              <i class="mdi-navigation-close"></i>
+            </div>
+          </form>
+        </li>
+        {{> yield 'sidenav'}} {{#if currentUser}}
+        <li><a id="logoutButton">{{_ 'logout'}}</a></li>{{/if}}
+      </ul>
+    </nav>
+  </div>
+
+  {{> yield}}
+
+
+  <footer class="page-footer blue-grey darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">{{_ "Albums photo"}}</h5>
+          <p class="grey-text text-lighten-4">{{_ "synopsis short"}}</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">{{_ "About"}}</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">{{_ "Contact"}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2015 Copyright MV
+      </div>
+    </div>
+  </footer>
+  {{> appVersion}}
+</template>

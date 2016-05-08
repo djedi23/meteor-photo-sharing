@@ -1,0 +1,35 @@
+* DONE Template spécifique si img pas trouve ou pas auth
+  CLOSED: [2015-07-10 Fri 06:45]
+** DONE message: image absente ou non autorisée
+   CLOSED: [2015-07-10 Fri 06:45]
+* DONE [#B] ne pas publier la liste des amis authorisés à voir une image :bug:
+  CLOSED: [2015-07-10 Fri 06:45]
+** C'est un problème de sécurité
+* [#C] Faire le showLoadingIndicator pour i18n
+* PROGRESS [#B] Page recherche
+** PROGRESS chercher dans
+*** DONE titre photo
+    CLOSED: [2015-05-30 Sat 08:16]
+*** description
+*** tags
+*** DONE nom utilisateur
+    CLOSED: [2015-05-30 Sat 08:16]
+* TODO Implemeter les effets sur les photos
+* PROGRESS Page profil
+** transformer invitation en méthode.
+** [#B] Gestion des groupes et des connaissances.
+** [#C] autoriser à rechercher
+* Selection multiple
+* TODO Problème des images suivantes et précédentes			:bug:
+  quels ordres...
+  peut pas toujours revenir en arrière
+  voir publish-compose
+* page photos:
+** faire des tags
+** exif
+* Album
+** album par default
+** PROGRESS Edition album
+* albums.meteor.com
+** manque graphicmagick
+

@@ -1,0 +1,1 @@
+exiv2 = Npm.require('exiv2');

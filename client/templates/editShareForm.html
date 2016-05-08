@@ -1,0 +1,69 @@
+<template name="editShareForm">
+  <div class="col s3 l2 blue-grey lighten-5 z-depth-1">
+    <div class="right"><a id="closeb" class="waves-effect waves-teal btn-flat"><i class="mdi-navigation-close"></i></a></div>
+    <div class="section">
+      <h5>{{_ 'Share'}}</h5>
+      {{> editSharePermissions}}
+    </div>
+  </div>
+</template>
+
+<template name="editSharePermissions">
+  {{> permission context key="isPublic" label="Public"}}
+  {{> permission context key="inHomepage" label="publishHomePage"}}
+  {{> permission context key="allowModification" label="allowModification"}}
+  {{> permissionFriend context key="friends" label="show friends"}}
+</template>
+
+<template name="permission">
+  <div class="row permission">
+    <div class="col">
+      {{_ label}}
+    </div>
+    <div class="right right-align">
+      {{#if haveParent}}<span style="display:inline-block">
+      <p style="display:inline-block"><input type="checkbox" class="filled-in parentPermission" checked="{{isEmpty field}}" disabled="{{isEmpty field}}" data-key="{{key}}" id="am{{key}}"/><label for="am{{key}}" style="height:16px"></label></p>
+      <div style="display:inline-block" class="switch"><label>{{_ "no"}}<input disabled type="checkbox" data-key="{{key}}" checked="{{parent}}"><span class="lever"></span>{{_ "yes"}}</label></div>
+      </span>{{/if}}
+      <div class="switch"><label>{{_ "no"}}<input type="checkbox" class="permission" data-key="{{key}}" checked="{{field}}"><span class="lever"></span>{{_ "yes"}}</label></div>
+    </div>
+  </div>
+</template>
+
+<template name="permissionFriend">
+  <div class="row">
+    <div class="col">
+      {{_ label}}
+    </div>
+    <div class="right right-align">
+      {{#if haveParent}}<span style="display:inline-block">
+	<p style="display:inline-block"><input type="checkbox" class="filled-in parentPermission" checked="{{isEmpty field}}" disabled="{{isEmpty field}}" data-key="{{key}}" id="am{{key}}"/><label for="am{{key}}" style="height:16px"></label></p>
+	{{#each parentTags}}
+	<span class="blue-grey lighten-5 blue-grey-text tag">{{profile.name.value}}</span>
+	{{/each}}
+      </span>{{/if}}
+    </div>
+    </div>
+  <div class="row permission">
+    <div class="col">
+      {{#each tags}}
+      <a class="blue-grey lighten-5 black-text btn tag"><i id="tagRemove" class="waves-effect right mdi-navigation-close"></i> {{profile.name.value}}</a>
+      {{/each}}
+    </div>
+    {{#if friends}}
+    <div class="right right-align">
+      {{> friendDropdown}}
+    </div>
+    {{/if}}
+  </div>
+</template>
+
+
+<template name="friendDropdown">
+  <a class='dropdown-button btn' href='#' data-activates='friendsDrop' data-constrainwidth='false'>{{_ "Friends"}}</a>
+  <ul id="friendsDrop" class="dropdown-content">
+    {{#each friends}}
+    <li><a id="add" class="truncate">{{profile.name.value}}</a></li>
+    {{/each}}
+  </ul>
+</template>

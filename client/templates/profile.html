@@ -1,0 +1,31 @@
+<template name="profile">
+  <div class="container fill-height">
+    <div class="profile-picture right">
+      {{#if profile.picture}}
+      {{#with picture}}
+      <img class="rounded responsive-img" src="{{this.url store='imagesThumbs'}}" alt=""/>
+      {{/with}}
+      {{else}}
+      no pic
+      {{/if}}
+    </div>
+    <h5>{{{profile.name.value}}}</h5>
+
+    <div class="row">
+      <div class="col s8">{{{profile.email.value}}}</div>
+    </div>
+
+    <div class="row">
+      <div class="col s8" data-key="description">{{{profile.description.value}}}</div>
+    </div>
+
+    {{#if invitable}}
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+      <a id="userInvite" class="btn-floating btn-large red">
+	<i class="large mdi-social-person-add"></i>
+      </a>
+    </div>
+    {{/if}}
+    
+  </div>
+</template>

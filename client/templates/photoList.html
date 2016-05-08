@@ -1,0 +1,61 @@
+<template name="photoList">
+<div class="photos-list">
+      {{#masonryContainer transitionDuration="0s" percentPosition="true" id="MasonryContainer" }}
+      {{#if currentUser}}{{#masonryElement parent="MasonryContainer"}}<div class="card">{{> upload}}</div>{{/masonryElement}}{{/if}}
+      {{#each photos}}
+      {{> photoCard}}
+      {{/each}}
+      {{/masonryContainer}}
+      {{#unless nophotos}}<span class="more{{limit}}"></span>{{/unless}}
+  </div>
+</template>
+
+<template name="photoCard">
+	{{#masonryElement parent="MasonryContainer" class=double}}
+	<div class="card" draggable="true">
+		<a href="{{pathFor routeToPhoto id=this._id  album=../album._id}}">
+			<div class="card-image">
+				{{#with image}} {{#unless this.isUploaded}}
+				<div class="blue-grey lighten-5 valign-wrapper" style="min-height:200px">
+					<div class="valign">
+						<div class="center-align" style="width:256px">
+							<div class="preloader-wrapper big active">
+								<div class="spinner-layer spinner-blue-only">
+									<div class="circle-clipper left">
+										<div class="circle"></div>
+									</div>
+									<div class="gap-patch">
+										<div class="circle"></div>
+									</div>
+									<div class="circle-clipper right">
+										<div class="circle"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{{else}}
+				<img src="{{this.url store='imagesThumbs'}}" alt="" draggable="false" width="{{width}}" height="{{height}}" /> {{/unless}} {{/with}}
+				<span class="card-title" style="width:100%">
+			      <span class="right-icon"><i class="material-icons small">star_border</i></span>
+						{{#if authorPicture}}<a href="{{pathFor 'profile' id=this.owner}}"><span class="profile-picture-tiny"><img class="circle responsive-img" style="border-radius:50%" src="{{authorPicture.url store='imagesThumbs'}}" alt=""/></span></a>{{/if}}
+						{{#if title}}<div class="truncate">{{{title}}}</div>{{/if}}
+						{{#if author}}<div style="font-size:16px">{{_ "byAuthor"}}<a href="{{pathFor 'profile' id=this.owner}}">{{{author}}}</a></div>{{/if}}
+		</span>
+		</div>
+		</a>
+	</div>
+	{{/masonryElement}}
+</template>
+
+
+<template name="photoListEmpty">
+  <div class="container">
+    <div class="row photos-list">
+      {{#masonryContainer transitionDuration="0.1s" gutter=5 id="MasonryContainer" }}
+      {{#if currentUser}}{{#masonryElement parent="MasonryContainer"}}<div class="card">{{> upload}}</div>{{/masonryElement}}{{/if}}
+      {{/masonryContainer}}
+    </div>
+  </div>
+</template>

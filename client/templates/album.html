@@ -1,0 +1,22 @@
+<template name="album">
+  <div class="row album fill-height">
+    <div class="col s12">
+      <div class="container">
+        <h4 class="editable" data-key="name">{{{name}}}</h4>
+      </div>
+      {{#with photos}} {{> photoList}} {{/with}} {{#unless photos}} {{> photoListEmpty}} {{/unless}}
+      {{#if isOwner}}
+      <div class="white toolbar-floating z-depth-1">
+        <div class="right-align">
+          <ul>
+            <li class="waves-effect"><a id="actionDeleteAlbum"><i class="mdi-action-delete"></i></a></li>
+            <li class="waves-effect {{#if editShareMode}}active{{/if}}"><a id="toggleEditShareMode"><i class="mdi-action-visibility"></i></a></li>
+          </ul>
+        </div>
+        {{#if editShareMode}} {{> editSharePermissions}} {{/if}}
+      </div>
+      {{/if}}
+
+    </div>
+  </div>
+</template>

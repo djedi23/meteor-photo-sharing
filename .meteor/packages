@@ -1,0 +1,57 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+audit-argument-checks
+less
+underscore
+iron:router
+cfs:standard-packages
+cfs:gridfs
+cfs:ui
+sacha:spin
+accounts-password
+cfs:graphicsmagick
+raix:ui-dropped-event
+natestrauser:animate-css
+djedi:pen
+msavin:mongol
+useraccounts:materialize
+robodo:masonrify
+alanning:roles
+tap:i18n
+tap:i18n-ui
+meteorhacks:subs-manager
+matb33:collection-hooks
+djedi:sanitize-html
+reywood:publish-composite
+msavin:jetsetter
+meteorhacks:fast-render
+appcache
+#djedi:webdav
+reactive-var
+momentjs:moment
+rzymek:moment-locale-fr
+djedi:modules
+#photo-caman
+standard-minifiers
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+jquery
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
+ecmascript
+useraccounts:iron-routing
+materialize:materialize@=0.97.3
+
+exiv2

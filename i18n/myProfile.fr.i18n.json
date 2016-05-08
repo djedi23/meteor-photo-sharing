@@ -1,0 +1,13 @@
+{
+    "My Name" : "Mon nom et prénom",
+    "hidden": "masqué",
+    "Default share": "Partage par défaut",
+    "descriptionPlaceholder": "Je me décris comme...",
+
+    "InvalidEmailAddress": "Adresse email invalide: %s",
+
+    "Invitations":"Invitations reçues",
+    "Anonymous user":"Utilisateur anonymous",
+    "Friends":"Amis",
+    "Invitations Sent":"Invitations envoyées"
+}

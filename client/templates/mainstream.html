@@ -1,0 +1,18 @@
+<template name="mainstream">
+  <div class="fill-height">
+    {{#if currentUser}}{{> albumList}}{{/if}}
+    {{#with photos}}
+    {{> photoList}}
+    {{/with}}
+    {{#if nophotos}}
+    <div class="container">
+      <h1>
+	{{_ "Photo Album"}}
+      </h1>
+      <h3>
+	{{_ "No photo to display"}}
+      </h3>
+    </div>
+    {{/if}}
+  </div>
+</template>

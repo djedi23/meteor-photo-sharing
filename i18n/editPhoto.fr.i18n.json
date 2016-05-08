@@ -1,0 +1,11 @@
+{
+    "Brightness": "Luminosité",
+
+    "Edit Title": "Titre de la photo",
+    "Edit Place": "Où a-t-elle été prise",
+    "Edit Date": "Quand à-t-elle été prise",
+    "Edit Description": "Pouvez vous en dire plus sur la photo",
+
+    "404 Title": "Photo non trouvée ou autorisation insuffisante.",
+    "404 Details": "..."
+}

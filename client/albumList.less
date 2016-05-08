@@ -1,0 +1,66 @@
+@import "variables.import.less";
+@defaultTransition: 0.1s ease-out;
+@albumHeight: 150px;
+@albumPanelHeight: @albumHeight + 23px;
+.albumPanel {
+	width: 100%;
+	z-index: 1;
+	transition: all @defaultTransition;
+	height: @albumPanelHeight;
+	&.empty {
+		height: 0;
+		.album {
+			transition: all @defaultTransition;
+			height: 0;
+		}
+		.container-fluid {
+			transition: all @defaultTransition;
+			overflow-x: hidden;
+		}
+	}
+	.album {
+		height: @albumHeight;
+		&.dropzone {
+			background-color: #d7ccc8 !important;
+		}
+		&.draghover {
+			box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.16), 0 5px 10px 0 rgba(0, 0, 0, 0.12);
+		}
+		&.thumbs img {
+			opacity: 0.75;
+			border-radius: 3px;
+			width: 100%;
+			display: block;
+		}
+		.card-title {
+			position: absolute;
+			bottom: 0;
+		}
+		.masonry-element {
+			width: 20%;
+		}
+	}
+	.container-fluid {
+		overflow-x: auto;
+		overflow-y: hidden;
+		.row {
+			display: flex;
+			margin-bottom:0px;
+			transition: all @defaultTransition;
+			.col {
+				float: left;
+			}
+		}
+	}
+	.right {
+		margin-top:20px;
+	}
+}
+
+.filler {
+	transition: padding-top @defaultTransition;
+	padding-top: 0;
+	&.filled {
+		padding-top: @albumPanelHeight;
+	}
+}
